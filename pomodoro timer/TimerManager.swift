@@ -14,6 +14,7 @@ class TimerManager: ObservableObject {
 
     func setTimer(minutes: Int) {
         secondsLeft = minutes * 60
+        secondsLeft = 2
         startTimer()
     }
 

@@ -16,6 +16,9 @@
 		F9C04E452B1382FE00614C51 /* TimerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C04E442B1382FE00614C51 /* TimerManager.swift */; };
 		F9C04E462B1382FE00614C51 /* TimerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C04E442B1382FE00614C51 /* TimerManager.swift */; };
 		F9C04E472B1382FE00614C51 /* TimerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C04E442B1382FE00614C51 /* TimerManager.swift */; };
+		F9C04E492B1386E600614C51 /* TimeStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C04E482B1386E600614C51 /* TimeStatus.swift */; };
+		F9C04E4A2B1386E600614C51 /* TimeStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C04E482B1386E600614C51 /* TimeStatus.swift */; };
+		F9C04E4B2B1386E600614C51 /* TimeStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C04E482B1386E600614C51 /* TimeStatus.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,7 @@
 		F9C04E352B136D3500614C51 /* pomodoro_timerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pomodoro_timerUITests.swift; sourceTree = "<group>"; };
 		F9C04E372B136D3500614C51 /* pomodoro_timerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pomodoro_timerUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		F9C04E442B1382FE00614C51 /* TimerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerManager.swift; sourceTree = "<group>"; };
+		F9C04E482B1386E600614C51 /* TimeStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeStatus.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +106,7 @@
 				F9C04E1D2B136D3500614C51 /* Assets.xcassets */,
 				F9C04E222B136D3500614C51 /* pomodoro_timer.entitlements */,
 				F9C04E442B1382FE00614C51 /* TimerManager.swift */,
+				F9C04E482B1386E600614C51 /* TimeStatus.swift */,
 			);
 			path = "pomodoro timer";
 			sourceTree = "<group>";
@@ -254,6 +259,7 @@
 			files = (
 				F9C04E452B1382FE00614C51 /* TimerManager.swift in Sources */,
 				F9C04E1C2B136D3300614C51 /* ContentView.swift in Sources */,
+				F9C04E492B1386E600614C51 /* TimeStatus.swift in Sources */,
 				F9C04E1A2B136D3300614C51 /* pomodoro_timerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -263,6 +269,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F9C04E2C2B136D3500614C51 /* pomodoro_timerTests.swift in Sources */,
+				F9C04E4A2B1386E600614C51 /* TimeStatus.swift in Sources */,
 				F9C04E462B1382FE00614C51 /* TimerManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -273,6 +280,7 @@
 			files = (
 				F9C04E472B1382FE00614C51 /* TimerManager.swift in Sources */,
 				F9C04E362B136D3500614C51 /* pomodoro_timerUITests.swift in Sources */,
+				F9C04E4B2B1386E600614C51 /* TimeStatus.swift in Sources */,
 				F9C04E382B136D3500614C51 /* pomodoro_timerUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

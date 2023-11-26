@@ -1,13 +1,6 @@
 
 import SwiftUI
 
-enum TimerState {
-    case running
-    case paused
-    case stopped
-}
-
-
 struct ContentView: View {
     @StateObject private var timerManager = TimerManager()
 
