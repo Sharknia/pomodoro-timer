@@ -7,8 +7,12 @@
 
 import Foundation
 
-enum TimerType {
-    case focus
-    case shortBreak
-    case longBreak
+enum TimerType: Int {
+    case focus = 25
+    case shortBreak = 5
+    case longBreak = 20
+
+    var minutes: Int {
+        return self.rawValue
+    }
 }

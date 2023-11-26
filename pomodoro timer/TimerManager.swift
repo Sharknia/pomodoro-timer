@@ -15,12 +15,13 @@ class TimerManager: ObservableObject {
     var timerType: TimerType = .focus
     var timer: Timer?
 
-    func setTimer(minutes: Int, type: TimerType) {
+    func setTimer(type: TimerType) {
         self.timerType = type
-        secondsLeft = minutes * 60
-        secondsLeft = 2
+        secondsLeft = type.minutes * 60
+        //secondsLeft = 2
         startTimer()
     }
+
 
     func startTimer() {
         timerState = .running
