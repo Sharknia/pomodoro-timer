@@ -14,7 +14,7 @@ class TimerManager: ObservableObject {
 
     func setTimer(minutes: Int) {
         secondsLeft = minutes * 60
-        secondsLeft = 2
+        secondsLeft = 2 //테스트용으로 2초로 고정
         startTimer()
     }
 
