@@ -55,4 +55,10 @@ class TimerManager: ObservableObject {
         timer?.invalidate()
         secondsLeft = 0 // 타이머 초기 시간으로 재설정
     }
+    
+    func timeString() -> String {
+        let minutes = secondsLeft / 60
+        let seconds = secondsLeft % 60
+        return String(format: "%02d:%02d", minutes, seconds)
+    }
 }

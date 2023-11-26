@@ -7,7 +7,7 @@ struct ContentView: View {
     var body: some View {
         VStack {
             if timerManager.timerState != .stopped {
-                Text("남은 시간: \(timerManager.secondsLeft)초")
+                Text(timerManager.timeString())
                     .font(.largeTitle)
                     .padding()
                     .foregroundColor(.white)
