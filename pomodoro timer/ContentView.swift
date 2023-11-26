@@ -15,17 +15,17 @@ struct ContentView: View {
 
             if timerManager.timerState == .stopped {
                 Button("25분 집중 시작") {
-                    timerManager.setTimer(minutes: 25)
+                    timerManager.setTimer(minutes: 25, type: .focus)
                 }
                 .customButtonStyle(backgroundColor: Color.gray.opacity(0.8))
 
                 Button("5분 휴식 시작") {
-                    timerManager.setTimer(minutes: 5)
+                    timerManager.setTimer(minutes: 5, type: .shortBreak)
                 }
                 .customButtonStyle(backgroundColor: Color.gray.opacity(0.8))
 
                 Button("20분 긴휴식 시작") {
-                    timerManager.setTimer(minutes: 20)
+                    timerManager.setTimer(minutes: 20, type: .longBreak)
                 }
                 .customButtonStyle(backgroundColor: Color.gray.opacity(0.8))
             } else {
@@ -48,6 +48,9 @@ struct ContentView: View {
         }
         .frame(width: 300, height: 200)
         .background(Color.black)
+        .alert(isPresented: $timerManager.showAlert) {
+            Alert(title: Text(timerManager.alertTitle), dismissButton: .default(Text("확인")))
+        }
     }
 }
 

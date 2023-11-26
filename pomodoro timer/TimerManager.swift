@@ -10,11 +10,15 @@ import Foundation
 class TimerManager: ObservableObject {
     @Published var secondsLeft = 0
     @Published var timerState = TimerState.stopped
+    @Published var showAlert = false
+    var alertTitle = ""
+    var timerType: TimerType = .focus
     var timer: Timer?
 
-    func setTimer(minutes: Int) {
+    func setTimer(minutes: Int, type: TimerType) {
+        self.timerType = type
         secondsLeft = minutes * 60
-        secondsLeft = 2 //테스트용으로 2초로 고정
+        secondsLeft = 2
         startTimer()
     }
 
@@ -26,6 +30,15 @@ class TimerManager: ObservableObject {
             if self.secondsLeft > 0 {
                 self.secondsLeft -= 1
             } else {
+                self.showAlert = true
+                switch self.timerType {
+                case .focus:
+                    self.alertTitle = "집중 시간 종료"
+                case .shortBreak:
+                    self.alertTitle = "짧은 휴식 시간 종료"
+                case .longBreak:
+                    self.alertTitle = "긴 휴식 시간 종료"
+                }
                 self.resetTimer()
             }
         }
