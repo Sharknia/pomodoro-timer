@@ -8,6 +8,8 @@
 import Foundation
 
 class TimerManager: ObservableObject {
+    static let shared = TimerManager()
+    
     @Published var secondsLeft = 0
     @Published var timerState = TimerState.stopped
     @Published var showAlert = false
@@ -15,6 +17,8 @@ class TimerManager: ObservableObject {
     var timerType: TimerType = .focus
     var timer: Timer?
 
+    var onTimerUpdate: (() -> Void)?
+    
     func setTimer(type: TimerType) {
         self.timerType = type
         secondsLeft = type.minutes * 60
@@ -25,11 +29,13 @@ class TimerManager: ObservableObject {
 
     func startTimer() {
         timerState = .running
+        
         timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { [weak self] _ in
             guard let self = self else { return }
 
             if self.secondsLeft > 0 {
                 self.secondsLeft -= 1
+                self.onTimerUpdate?()
             } else {
                 self.showAlert = true
                 switch self.timerType {
