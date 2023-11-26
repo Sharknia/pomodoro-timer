@@ -59,6 +59,7 @@
 		F9C04E482B1386E600614C51 /* TimeStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeStatus.swift; sourceTree = "<group>"; };
 		F9C04E502B13AA8000614C51 /* TimeType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeType.swift; sourceTree = "<group>"; };
 		F9C04E542B13AFEF00614C51 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F9C04E582B13B48000614C51 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +90,7 @@
 		F9C04E0D2B136D3300614C51 = {
 			isa = PBXGroup;
 			children = (
+				F9C04E582B13B48000614C51 /* README.md */,
 				F9C04E182B136D3300614C51 /* pomodoro timer */,
 				F9C04E2A2B136D3500614C51 /* pomodoro timerTests */,
 				F9C04E342B136D3500614C51 /* pomodoro timerUITests */,
