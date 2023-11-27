@@ -24,6 +24,7 @@
 		F9C04E552B13AFEF00614C51 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C04E542B13AFEF00614C51 /* AppDelegate.swift */; };
 		F9C04E562B13AFEF00614C51 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C04E542B13AFEF00614C51 /* AppDelegate.swift */; };
 		F9C04E572B13AFEF00614C51 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C04E542B13AFEF00614C51 /* AppDelegate.swift */; };
+		F9C04E5C2B14E12300614C51 /* MenubarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C04E5B2B14E12300614C51 /* MenubarManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		F9C04E502B13AA8000614C51 /* TimeType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeType.swift; sourceTree = "<group>"; };
 		F9C04E542B13AFEF00614C51 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F9C04E582B13B48000614C51 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		F9C04E5B2B14E12300614C51 /* MenubarManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenubarManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 				F9C04E482B1386E600614C51 /* TimeStatus.swift */,
 				F9C04E502B13AA8000614C51 /* TimeType.swift */,
 				F9C04E542B13AFEF00614C51 /* AppDelegate.swift */,
+				F9C04E5B2B14E12300614C51 /* MenubarManager.swift */,
 			);
 			path = "pomodoro timer";
 			sourceTree = "<group>";
@@ -268,6 +271,7 @@
 			files = (
 				F9C04E552B13AFEF00614C51 /* AppDelegate.swift in Sources */,
 				F9C04E452B1382FE00614C51 /* TimerManager.swift in Sources */,
+				F9C04E5C2B14E12300614C51 /* MenubarManager.swift in Sources */,
 				F9C04E512B13AA8000614C51 /* TimeType.swift in Sources */,
 				F9C04E492B1386E600614C51 /* TimeStatus.swift in Sources */,
 				F9C04E1A2B136D3300614C51 /* pomodoro_timerApp.swift in Sources */,
