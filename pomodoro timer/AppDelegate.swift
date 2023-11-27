@@ -47,7 +47,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             menu.addItem(withTitle: "25분 집중 시작", action: #selector(startFocus), keyEquivalent: "")
             menu.addItem(withTitle: "5분 휴식 시작", action: #selector(startShortBreak), keyEquivalent: "")
             menu.addItem(withTitle: "20분 긴휴식 시작", action: #selector(startLongBreak), keyEquivalent: "")
-        } else {
+        } else if timerManager.timerState == .paused {
+            menu.addItem(withTitle: "다시 시작", action: #selector(resumeTimer), keyEquivalent: "")
+            menu.addItem(withTitle: "리셋", action: #selector(resetTimer), keyEquivalent: "")
+        } else { // 타이머가 실행 중일 때
             menu.addItem(withTitle: "일시 정지", action: #selector(pauseTimer), keyEquivalent: "")
             menu.addItem(withTitle: "리셋", action: #selector(resetTimer), keyEquivalent: "")
         }
@@ -81,6 +84,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     @objc func resetTimer() {
         timerManager.resetTimer()
+        updateMenuBar()
+        constructMenu()
+    }
+    
+    @objc func resumeTimer() {
+        timerManager.startTimer()
         updateMenuBar()
         constructMenu()
     }
