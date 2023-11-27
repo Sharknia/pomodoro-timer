@@ -14,6 +14,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     var timerManager = TimerManager.shared // 싱글턴 인스턴스 사용
 
     func applicationDidFinishLaunching(_ notification: Notification) {
+        // 메인 윈도우를 표시하지 않음
+        NSApplication.shared.setActivationPolicy(.accessory)
         
         // 메뉴 바 아이템 생성
         self.statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)

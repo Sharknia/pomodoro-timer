@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		F9C04E1A2B136D3300614C51 /* pomodoro_timerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C04E192B136D3300614C51 /* pomodoro_timerApp.swift */; };
-		F9C04E1C2B136D3300614C51 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C04E1B2B136D3300614C51 /* ContentView.swift */; };
 		F9C04E1E2B136D3500614C51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9C04E1D2B136D3500614C51 /* Assets.xcassets */; };
 		F9C04E2C2B136D3500614C51 /* pomodoro_timerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C04E2B2B136D3500614C51 /* pomodoro_timerTests.swift */; };
 		F9C04E362B136D3500614C51 /* pomodoro_timerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C04E352B136D3500614C51 /* pomodoro_timerUITests.swift */; };
@@ -47,7 +46,6 @@
 /* Begin PBXFileReference section */
 		F9C04E162B136D3300614C51 /* pomodoro timer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "pomodoro timer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9C04E192B136D3300614C51 /* pomodoro_timerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pomodoro_timerApp.swift; sourceTree = "<group>"; };
-		F9C04E1B2B136D3300614C51 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		F9C04E1D2B136D3500614C51 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F9C04E222B136D3500614C51 /* pomodoro_timer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = pomodoro_timer.entitlements; sourceTree = "<group>"; };
 		F9C04E272B136D3500614C51 /* pomodoro timerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "pomodoro timerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -112,7 +110,6 @@
 			isa = PBXGroup;
 			children = (
 				F9C04E192B136D3300614C51 /* pomodoro_timerApp.swift */,
-				F9C04E1B2B136D3300614C51 /* ContentView.swift */,
 				F9C04E1D2B136D3500614C51 /* Assets.xcassets */,
 				F9C04E222B136D3500614C51 /* pomodoro_timer.entitlements */,
 				F9C04E442B1382FE00614C51 /* TimerManager.swift */,
@@ -272,7 +269,6 @@
 				F9C04E552B13AFEF00614C51 /* AppDelegate.swift in Sources */,
 				F9C04E452B1382FE00614C51 /* TimerManager.swift in Sources */,
 				F9C04E512B13AA8000614C51 /* TimeType.swift in Sources */,
-				F9C04E1C2B136D3300614C51 /* ContentView.swift in Sources */,
 				F9C04E492B1386E600614C51 /* TimeStatus.swift in Sources */,
 				F9C04E1A2B136D3300614C51 /* pomodoro_timerApp.swift in Sources */,
 			);

@@ -11,8 +11,7 @@ import SwiftUI
 struct pomodoro_timerApp: App {
     @NSApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     var body: some Scene {
-        WindowGroup {
-            //ContentView()
-        }
+        // 빈 Scene 반환
+        Settings {}
     }
 }
