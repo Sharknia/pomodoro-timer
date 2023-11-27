@@ -17,7 +17,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         // 메뉴 바 아이템 생성
         self.statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
-
+        
+        // 드롭다운 메뉴 생성
+        constructMenu()
+        
         // 타이머 초기화 및 업데이트
         Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { _ in
             self.updateMenuBar()
@@ -25,12 +28,60 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         timerManager.onTimerUpdate = { [weak self] in
             self?.updateMenuBar()
+            self?.constructMenu()
         }
+        
     }
 
+    
     func updateMenuBar() {
         let timeString = timerManager.timerState != .stopped ? timerManager.timeString() : "--:--"
-        print(timerManager.timerState)
         statusItem?.button?.title = timeString
+    }
+    
+    func constructMenu() {
+        let menu = NSMenu()
+        
+        // 타이머 상태에 따라 메뉴 아이템 추가
+        if timerManager.timerState == .stopped {
+            menu.addItem(withTitle: "25분 집중 시작", action: #selector(startFocus), keyEquivalent: "")
+            menu.addItem(withTitle: "5분 휴식 시작", action: #selector(startShortBreak), keyEquivalent: "")
+            menu.addItem(withTitle: "20분 긴휴식 시작", action: #selector(startLongBreak), keyEquivalent: "")
+        } else {
+            menu.addItem(withTitle: "일시 정지", action: #selector(pauseTimer), keyEquivalent: "")
+            menu.addItem(withTitle: "리셋", action: #selector(resetTimer), keyEquivalent: "")
+        }
+
+        statusItem?.menu = menu
+    }
+    
+    @objc func startFocus() {
+        timerManager.setTimer(type: .focus)
+        updateMenuBar()
+        constructMenu()
+    }
+
+    @objc func startShortBreak() {
+        timerManager.setTimer(type: .shortBreak)
+        updateMenuBar()
+        constructMenu()
+    }
+
+    @objc func startLongBreak() {
+        timerManager.setTimer(type: .longBreak)
+        updateMenuBar()
+        constructMenu()
+    }
+
+    @objc func pauseTimer() {
+        timerManager.pauseTimer()
+        updateMenuBar()
+        constructMenu()
+    }
+
+    @objc func resetTimer() {
+        timerManager.resetTimer()
+        updateMenuBar()
+        constructMenu()
     }
 }
