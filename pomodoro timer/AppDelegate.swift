@@ -14,6 +14,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     var timerManager = TimerManager.shared // 싱글턴 인스턴스 사용
 
     func applicationDidFinishLaunching(_ notification: Notification) {
+        
         // 메뉴 바 아이템 생성
         self.statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
 
@@ -29,6 +30,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     func updateMenuBar() {
         let timeString = timerManager.timerState != .stopped ? timerManager.timeString() : "--:--"
+        print(timerManager.timerState)
         statusItem?.button?.title = timeString
     }
 }

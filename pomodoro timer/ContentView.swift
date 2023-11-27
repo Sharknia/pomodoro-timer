@@ -2,7 +2,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @StateObject private var timerManager = TimerManager()
+    @StateObject private var timerManager = TimerManager.shared
 
     var body: some View {
         VStack {

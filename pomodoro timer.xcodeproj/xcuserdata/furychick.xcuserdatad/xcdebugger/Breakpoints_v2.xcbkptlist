@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "50A3F165-3560-4436-AFA6-4ADF1C7E11D6"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FCAED3D4-774E-4CA0-978D-CA899B6DED47"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "pomodoro timer/AppDelegate.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "updateMenuBar()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "FCAED3D4-774E-4CA0-978D-CA899B6DED47 - 17ed79445c43967c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "pomodoro_timer.AppDelegate.updateMenuBar() -&gt; ()"
+                  moduleName = "pomodoro timer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/furychick/%E1%84%80%E1%85%A2%E1%84%87%E1%85%A1%E1%86%AF/pomodoro-timer/pomodoro%20timer/pomodoro%20timer/AppDelegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "80">
+               </Location>
+               <Location
+                  uuid = "FCAED3D4-774E-4CA0-978D-CA899B6DED47 - 17ed79445c43967c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "pomodoro_timer.AppDelegate.updateMenuBar() -&gt; ()"
+                  moduleName = "pomodoro timer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/furychick/%E1%84%80%E1%85%A2%E1%84%87%E1%85%A1%E1%86%AF/pomodoro-timer/pomodoro%20timer/pomodoro%20timer/AppDelegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "108">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
