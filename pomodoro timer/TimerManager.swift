@@ -29,24 +29,30 @@ class TimerManager: ObservableObject {
     func startTimer() {
         timerState = .running
         
-        timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { [weak self] _ in
-            guard let self = self else { return }
+        // 별도의 스레드에서 타이머 실행
+        DispatchQueue.global(qos: .background).async {
+            self.timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { [weak self] _ in
+                DispatchQueue.main.async {
+                    guard let self = self else { return }
 
-            if self.secondsLeft > 0 {
-                self.secondsLeft -= 1
-                self.onTimerUpdate?()
-            } else {
-                self.showAlert = true
-                switch self.timerType {
-                case .focus:
-                    self.alertTitle = "집중 시간 종료"
-                case .shortBreak:
-                    self.alertTitle = "짧은 휴식 시간 종료"
-                case .longBreak:
-                    self.alertTitle = "긴 휴식 시간 종료"
+                    if self.secondsLeft > 0 {
+                        self.secondsLeft -= 1
+                        self.onTimerUpdate?()
+                    } else {
+                        self.showAlert = true
+                        switch self.timerType {
+                        case .focus:
+                            self.alertTitle = "집중 시간 종료"
+                        case .shortBreak:
+                            self.alertTitle = "짧은 휴식 시간 종료"
+                        case .longBreak:
+                            self.alertTitle = "긴 휴식 시간 종료"
+                        }
+                        self.resetTimer()
+                    }
                 }
-                self.resetTimer()
             }
+            RunLoop.current.run()
         }
     }
 
