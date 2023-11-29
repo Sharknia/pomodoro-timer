@@ -37,7 +37,6 @@ class TimerManager: ObservableObject {
 
                     if self.secondsLeft > 0 {
                         self.secondsLeft -= 1
-                        self.onTimerUpdate?()
                     } else {
                         self.showAlert = true
                         switch self.timerType {
@@ -50,12 +49,13 @@ class TimerManager: ObservableObject {
                         }
                         self.resetTimer()
                     }
+                    self.onTimerUpdate?()
                 }
             }
             RunLoop.current.run()
         }
     }
-
+    
     func pauseTimer() {
         timerState = .paused
         timer?.invalidate()
