@@ -25,4 +25,32 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             self?.menuBarManager?.constructMenu()
         }
     }
+    
+    func application(_ application: NSApplication, open urls: [URL]) {
+        for url in urls {
+            handleURL(url)
+        }
+    }
+
+    private func handleURL(_ url: URL) {
+        guard let command = url.host else { return }
+
+        switch command {
+        case "startFocus":
+            menuBarManager?.startFocus()
+        case "startShortBreak":
+            menuBarManager?.startShortBreak()
+        case "startLongBreak":
+            menuBarManager?.startLongBreak()
+        case "pauseTimer":
+            menuBarManager?.pauseTimer()
+        case "resetTimer":
+            menuBarManager?.resetTimer()
+        case "resumeTimer":
+            menuBarManager?.resumeTimer()
+        default:
+            break
+        }
+    }
+
 }
